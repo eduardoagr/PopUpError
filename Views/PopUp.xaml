@@ -1,0 +1,35 @@
+<mct:Popup
+    x:Class="PopUpError.Views.PopUp"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:PopUpError.ViewModels"
+    x:DataType="vm:PopUpViewModel"
+    x:Name="mctPop">
+
+    <Grid
+        Padding="20"
+        HeightRequest="500"
+        RowDefinitions="Auto"
+        WidthRequest="400">
+
+        <Border
+            x:Name="PopUpBorder"
+            Grid.Row="0"
+            BackgroundColor="#0213A0"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="8">
+            <VerticalStackLayout>
+                <Label Text="Hello Community" />
+
+                <Button
+                    Command="{Binding closeCommand}"
+                    CommandParameter="{Binding Source={x:Reference mctPop}}"
+                    Text="Close" />
+            </VerticalStackLayout>
+
+        </Border>
+
+
+    </Grid>
+</mct:Popup>
