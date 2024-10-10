@@ -4,14 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:PopUpError.ViewModels"
-    x:DataType="vm:PopUpViewModel"
-    x:Name="mctPop">
+    x:Name="mctPop"
+    x:DataType="vm:PopUpViewModel">
 
     <Grid
         Padding="20"
-        HeightRequest="500"
-        RowDefinitions="Auto"
-        WidthRequest="400">
+        RowDefinitions="Auto">
 
         <Border
             x:Name="PopUpBorder"

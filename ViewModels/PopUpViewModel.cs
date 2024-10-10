@@ -5,6 +5,7 @@ public partial class PopUpViewModel : ObservableObject {
     void close(Popup popup) {
 
         popup.Close();
+
     }
 
 }
